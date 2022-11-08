@@ -3,7 +3,7 @@ pipeline {
     docker { image 'liquibase/liquibase:4.17' }
   }
   environment {
-    MARIADB_CREDS=credentials('mariadb-credentials')
+    DATABASE_URL='jdbc:postgresql://localhost:5432/postgres'
   }
   stages {
     stage('Status') {
