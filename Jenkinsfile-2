@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
+        sh 'liquibase update --rl="jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
       }
     }
   }
