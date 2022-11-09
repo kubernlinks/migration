@@ -3,17 +3,17 @@ pipeline {
     docker { image 'liquibase/liquibase:4.17' }
   }
   environment {
-    DATABASE_URL='jdbc:postgresql://localhost:5432/postgres'
+    DATABASE_URL='jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres'
   }
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:postgresql://127.0.0.1:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
+        sh 'liquibase status --url="jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:postgresql://127.0.0.1:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
+        sh 'liquibase update --url="jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres" --changeLogFile=my_app-wrapper.xml --username=postgres --password=fellaini'
       }
     }
   }
