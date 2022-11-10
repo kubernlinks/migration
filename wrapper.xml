@@ -12,4 +12,5 @@
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
   <include file="app1.xml"/>
   <include file="app2.xml"/>
+  <include file="app3.xml"/>
 </databaseChangeLog>
