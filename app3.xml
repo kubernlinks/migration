@@ -14,20 +14,20 @@
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_BREEDS" />
             </column>
             <column name="BRE_NAME" type="varchar(100)">
-                <constraints nullable="false" />
+                <constraints nullable="false"/>
             </column>
         </createTable>
     </changeSet>
 
-    <changeSet id="List of BREEDS" author="DBA presents">
+    <changeSet id="List of BREEDS" author="vince">
         <insert tableName="BREEDS">
-            <column name="BRE_NAME" value="Golden Retriever" />
+            <column name="BRE_NAME" value="Golden Retriever"/>
         </insert>
         <insert tableName="BREEDS">
-            <column name="BRE_NAME" value="American Staffordshire Terrier" />
+            <column name="BRE_NAME" value="American Staffordshire Terrier"/>
         </insert>
         <insert tableName="BREEDS">
-            <column name="BRE_NAME" value="German Shepherd Doger" />
+            <column name="BRE_NAME" value="German Shepherd Doger"/>
         </insert>
     </changeSet>
 
