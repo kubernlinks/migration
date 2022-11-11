@@ -10,6 +10,11 @@
                         http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd 
                         http://www.liquibase.org/xml/ns/dbchangelog 
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
-  <include file="app1.xml"/>
-  <include file="app2.xml"/>
+    <changeSet author="vince" id="addColumn-countries-1">
+      <addColumn tableName="countries">
+        <column name="abc_xyz" type="VARCHAR(3)">
+          <constraints nullable="false"/>
+        </column>
+      </addColumn>
+    </changeSet>
 </databaseChangeLog>
