@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'liquibase/liquibase:4.17' }
+    docker { image 'liquibase/liquibase:4.19.1' }
   }
   environment {
     DATABASE_URL='jdbc:postgresql://database-1.cpuc6bgspxr2.eu-central-1.rds.amazonaws.com:5432/postgres'
